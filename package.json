@@ -1,7 +1,7 @@
 {
   "name": "npm-security",
   "version": "1.0.1",
-  "description": "",
+  "description": "Makes use of npm audit to check if any critical vulnerabilities are present.",
   "main": "index.js",
   "bin": {
     "npmsec": "./index.js"
