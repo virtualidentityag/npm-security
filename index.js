@@ -8,8 +8,12 @@ try {
             checkCategoryOrHigher = val;
         }
     });
-    
-    childProcess.exec('npm audit --json', function (error, stdout, stderr){
+
+    const childProcessOptions = {
+      maxBuffer: 1000 * 1000 * 10, // 10 MB
+    }
+
+    childProcess.exec('npm audit --json', childProcessOptions, function (error, stdout, stderr) {
         try{
             JSON.parse(stdout);
             if(typeof stderror == 'undefined') {
